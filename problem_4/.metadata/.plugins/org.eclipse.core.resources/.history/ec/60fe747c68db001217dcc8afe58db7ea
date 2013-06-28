@@ -1,0 +1,30 @@
+package com.fuentesj.euler;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	private static boolean isPalindrome(Integer num) {
+		StringBuilder numBuilder = new StringBuilder(num.toString());
+		if (numBuilder.length() == 1) {
+			return true;
+		}
+		else {
+			int start = 0;
+			int end = numBuilder.length() - 1;
+			if (numBuilder.length() % 2 == 0) {
+				while (!(start > end)) {
+					if (!(Character.valueOf(numBuilder.charAt(start)).equals(Character.valueOf(numBuilder.charAt(end)))))
+				}
+			}
+			else {
+				while (!(start == end)) {
+					
+				}
+			}
+		}
+	}
+	
+}

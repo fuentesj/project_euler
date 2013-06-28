@@ -1,0 +1,48 @@
+package com.fuentesj.euler;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+		System.out.println(isPalindrome(1));
+		System.out.println(isPalindrome(10));
+		System.out.println(isPalindrome(11));
+		System.out.println(isPalindrome(101));
+		System.out.println(isPalindrome(1010));
+		System.out.println(isPalindrome(1001));
+		System.out.println(isPalindrome(1001001));
+		System.out.println(isPalindrome(10101));
+	}
+	
+	private static boolean isPalindrome(Integer num) {
+		StringBuilder numBuilder = new StringBuilder(num.toString());
+		if (numBuilder.length() == 1) {
+			return true;
+		}
+		else {
+			int start = 0;
+			int end = numBuilder.length() - 1;
+			if (numBuilder.length() % 2 == 0) {
+				while (!(start > end)) {
+					if (!(Character.valueOf(numBuilder.charAt(start)).equals(Character.valueOf(numBuilder.charAt(end))))) {
+						return false;
+					}
+					start++;
+					end--;
+				}
+				return true;
+			}
+			else {
+				while (!(start == end)) {
+					if (!(Character.valueOf(numBuilder.charAt(start)).equals(Character.valueOf(numBuilder.charAt(end))))) {
+						return false;
+					}
+					start++;
+					end--;
+				}
+				return true;
+			}
+		}
+	}
+	
+}
